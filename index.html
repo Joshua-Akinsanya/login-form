@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-layout">
+    <nav>
+        <a href="#" class="logo">Logo</a>
+    </nav>
+
+    <main class="main-container">
+        <form action="" method="post" target="_self" autocomplete="off" class="form">
+            <h1 class="form-title">Sign up !</h1>
+
+            <div class="field-group">
+                <label for="name-input">Name: </label>
+                <input type="text" name="name" id="name-input">
+            </div>
+
+            <div class="field-group">
+                <label for="date-input">Birthday: </label>
+                <input type="date" name="date" id="date-input">
+            </div>
+
+            <div class="field-group">
+                <label for="email-input">Email: </label>
+                <input type="email" name="email" id="email-input">
+            </div>
+
+            <div class="field-group">
+                <label for="password-input">Password: </label>
+                <input type="password" name="password" id="password-input">
+            </div>
+
+            <div class="field-group checkbox-field">
+                <input type="checkbox" name="agree" id="agree-input">
+                <label for="agree-input">Do you agree to the <a href="#" target="_blank">terms and conditions</a>?</label>
+            </div>
+
+            <input type="submit" value="Submit" class="submit-button">
+
+            <div class="login-group">
+                <p class="login-text">Already have an account? then <a href="login.html" class="login-link">login here</a></p>
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        <span>(c) Copyright 2025</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
