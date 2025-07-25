@@ -1,5 +1,5 @@
 window.addEventListener("resize", () =>{
-    if(window.innerHeight < 150) {
+    if(window.innerHeight < 150 || window.innerWidth < 190) {
         alert('Increase your window size, bro !');
     }
 });

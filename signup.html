@@ -6,7 +6,7 @@
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-layout">
+<body>
     <nav>
         <a href="#" class="logo">Logo</a>
     </nav>
@@ -35,15 +35,16 @@
                 <input type="password" name="password" id="password-input">
             </div>
 
-            <div class="field-group checkbox-field">
+            <div class="field-group checkbox-field-group">
                 <input type="checkbox" name="agree" id="agree-input">
-                <label for="agree-input">Do you agree to the <a href="#" target="_blank">terms and conditions</a>?</label>
+                <label for="">By ticking this box, you are agreeing to the <a href="#" target="_blank" class="link">terms and conditions</a>?</label>
+                <!-- Empty Label to avoid clickable text -->
             </div>
 
             <input type="submit" value="Submit" class="submit-button">
 
-            <div class="login-group">
-                <p class="login-text">Already have an account? then <a href="login.html" class="login-link">login here</a></p>
+            <div class="redirect-group">
+                <p class="login-text">Already have an account? then <a href="login.html" class="link">login here</a></p>
             </div>
         </form>
     </main>

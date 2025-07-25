@@ -1,5 +1,10 @@
 /* Using Mobile first design approach*/
 
+:root {
+    --green: rgb(0, 100, 0);
+    --light-green: rgb(0, 155, 0);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,20 +14,23 @@
 body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
-    background-color: rgb(200, 200, 200);
-}
-
-.page-layout {
+    background-image: linear-gradient( rgba(0,200,0,0.15), rgba(0,128,0,0.15) );
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 
-/* Navigation Bar Styles */
+/***************************************************************
+
+
+Navigation Bar Styles 
+
+
+*****************************************************************/
 
 nav {
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(225, 235, 225);
     width: 100%;
     height: 50px;
     display: flex;
@@ -42,30 +50,39 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 0.3s ease;
 }
 
 nav a:hover {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 87, 0, 0.5);
+}
+
+.logo {
+    background-color: rgb(0, 87, 0);
+    color: white;
 }
 
 
-/* Main Content Styles */
+/***************************************************************
+
+
+Main Content Styles 
+
+
+*****************************************************************/
 
 .main-container {
     width: 100%;
-    height: calc(100vh - 110px);
-    min-height: 480px;
     padding: 30px 0px 30px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .form {
+    /* Form container box */
     width: 100%;
     padding: 30px 10px 30px 10px;
+    margin: 50px 0px 50px 0px;
     background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 87, 0, 0.2);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -83,19 +100,72 @@ nav a:hover {
     flex-direction: column;
 }
 
-.checkbox-field {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    padding: 7px 7px 4px 7px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 1.02rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border: 2px solid rgba(0, 155, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+input[type="date"] {
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+input[type="date"]:focus {
+    color: #333
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    border: none;
+    background-color: var(--green);
+    width: 50%;
+    max-width: 220px;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    color: white;
+    margin: auto;
+    padding: 12px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"], input[type="checkbox"] {
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: var(--light-green);
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox-field-group {
     display: flex;
     flex-direction: row;
     gap: 12px;
-    justify-content: center;
+    justify-content:flex-start;
 }
 
-.submit-button {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.login-group {
+.redirect-group {
+    /* Text that redirects to other form*/
     width: auto;
     margin: auto;
     margin-top: 20px;
@@ -106,16 +176,32 @@ nav a:hover {
     text-align: center;
 }
 
+.link {
+    text-decoration: none;
+    color: var(--light-green);
+}
 
-/* Footer */
+.link:active {
+    color: var(--green);
+}
+
+
+/***************************************************************
+
+
+Footer Styles 
+
+
+*****************************************************************/
 
 footer {
-    min-height: 60px;
     margin-top: auto;
-    background-color: rgb(235, 235, 235);
+    min-height: 60px;
+    background-color: rgb(180, 195, 180);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 /* Media Queries */
