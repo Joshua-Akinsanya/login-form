@@ -108,6 +108,7 @@ input[type="date"] {
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.05);
     font-size: 1.02rem;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) inset;
 }
 
 input[type="text"]:focus,
@@ -117,6 +118,7 @@ input[type="date"]:focus {
     outline: none;
     border: 2px solid rgba(0, 155, 0, 0.8);
     background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: none;
 }
 
 input[type="date"] {
@@ -131,7 +133,7 @@ input[type="date"]:focus {
 input[type="button"], input[type="submit"], input[type="reset"] {
     border: none;
     background-color: var(--green);
-    width: 50%;
+    width: 100%;
     max-width: 220px;
     border-radius: 3px;
     font-size: 1.1rem;
@@ -212,6 +214,10 @@ footer {
         padding: 30px 2% 30px 2%;
         margin: auto;
     }
+
+    input[type="button"], input[type="submit"], input[type="reset"] {
+        width: 50%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -220,9 +226,27 @@ footer {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
     .form {
-        width: 33.33%;/* 4 of 12 */
+        width: 41.67%; /* 5 of 12 */
         padding: 30px 1% 30px 1%;
+    }
+}
+
+@media (min-width: 1366px) {
+    .form {
+        width: 33.33%; /* 4 of 12 */
+    }
+}
+
+@media (min-width: 1920px) {
+    .form {
+        width: 25%; /* 3 of 12 */
+    }
+}
+
+@media (min-width: 3840) {
+    .form {
+        width: 16.67%; /* 2 of 12 */
     }
 }
