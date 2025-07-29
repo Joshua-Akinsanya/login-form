@@ -12,7 +12,7 @@
     </nav>
 
     <main class="main-container">
-        <form action="" method="post" target="_self" autocomplete="off" class="form">
+        <form name="signup" action="" method="post" target="_self" autocomplete="off" class="form" onsubmit="return validateSignup()">
             <h1 class="form-title">Sign up !</h1>
 
             <div class="field-group">
@@ -27,12 +27,12 @@
 
             <div class="field-group">
                 <label for="email-input">Email: </label>
-                <input type="email" name="email" id="email-input">
+                <input type="email" name="email" id="email-input" required>
             </div>
 
             <div class="field-group">
                 <label for="password-input">Password: </label>
-                <input type="password" name="password" id="password-input">
+                <input type="password" name="password" id="password-input" required>
             </div>
 
             <div class="field-group checkbox-field-group">
