@@ -14,25 +14,30 @@
     <main class="main-container">
         <form name="signup" action="" method="post" target="_self" autocomplete="off" class="form" onsubmit="return validateSignup()">
             <h1 class="form-title">Sign up !</h1>
+            <p class="form-sub-title"><span style="color:red;">*</span> fields are required</p>
 
             <div class="field-group">
                 <label for="name-input">Name: </label>
                 <input type="text" name="name" id="name-input">
+                <span class="error-message" style="color:red;font-size:0.7em;height:14px"></span>
             </div>
 
             <div class="field-group">
                 <label for="date-input">Birthday: </label>
                 <input type="date" name="date" id="date-input">
+                <span class="error-message" style="color:red;font-size:0.7em;height:14px"></span>
             </div>
 
             <div class="field-group">
-                <label for="email-input">Email: </label>
+                <label for="email-input">Email: <span class="error-message" style="color:red;">*</span></label>
                 <input type="email" name="email" id="email-input" required>
+                <span class="error-message" style="color:red;font-size:0.7em;height:14px"></span>
             </div>
 
             <div class="field-group">
-                <label for="password-input">Password: </label>
+                <label for="password-input">Password: <span class="error-message" style="color:red;">*</span></label>
                 <input type="password" name="password" id="password-input" required>
+                <span class="error-message" style="color:red;font-size:0.7em;height:14px"></span>
             </div>
 
             <div class="field-group checkbox-field-group">

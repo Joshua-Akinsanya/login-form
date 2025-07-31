@@ -4,6 +4,7 @@
     --green: rgb(0, 100, 0);
     --light-green: rgb(0, 155, 0);
     --dark-green: rgb(0, 70, 0);
+    --error-red: rgb(255, 120, 120);
 }
 
 * {
@@ -88,16 +89,28 @@ Main Content Styles
     gap: 10px;
 }
 
-.form-title {
+h1.form-title {
     font-size: 2rem;
     font-weight: normal;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+}
+
+p.form-sub-title {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .field-group {
     display: flex;
     flex-direction: column;
+}
+
+.error-message {
+    color:red;
+    font-size:0.7em;
+    height:14px
 }
 
 input[type="text"],
@@ -117,7 +130,7 @@ input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="password"]:hover,
 input[type="date"]:hover {
-    border-color: var(--dark-green);
+    border-color: var(--green);
 }
 
 input[type="text"]:focus,
@@ -125,9 +138,13 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus {
     outline: none;
-    border: 2px solid rgba(0, 155, 0, 0.8);
+    border: 2px solid var(--light-green);
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: none;
+}
+
+input.invalid {
+    border: 2px solid var(--error-red);
 }
 
 input[type="date"] {
@@ -139,7 +156,9 @@ input[type="date"]:focus {
     color: #333
 }
 
-input[type="button"], input[type="submit"], input[type="reset"] {
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
     border: none;
     background-color: var(--green);
     width: 100%;
