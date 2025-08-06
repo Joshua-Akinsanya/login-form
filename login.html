@@ -12,19 +12,19 @@
     </nav>
 
     <main class="main-container">
-        <form name="login" action="" method="post" target="_self" autocomplete="off" class="form" onsubmit="return validateLogin()">
+        <form name="login" action="" method="post" target="_self" autocomplete="off" class="form">
             <h1 class="form-title">Log in</h1>
 
             <div class="field-group">
                 <label for="email-input">Email: </label>
-                <input type="email" name="email" id="email-input" required minlength="5">
-                <span class="error-message" style="color:red;font-size:0.7em;height:14px"></span>
+                <input type="email" name="email" id="email-input" required>
+                <span class="error-message" id="email-error-message"></span>
             </div>
 
             <div class="field-group">
                 <label for="password-input">Password: </label>
-                <input type="password" name="password" id="password-input" required minlength="4">
-                <span class="error-message" style="color:red;font-size:0.7em;height:14px"></span>
+                <input type="password" name="password" id="password-input" required>
+                <span class="error-message" id="password-error-message"></span>
             </div>
 
             <input type="submit" value="Login" class="submit-button">
@@ -40,5 +40,6 @@
     </footer>
 
     <script src="app.js"></script>
+    <script src="loginvalidation.js"></script>
 </body>
 </html>
