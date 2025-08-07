@@ -12,7 +12,7 @@
     </nav>
 
     <main class="main-container">
-        <form name="signup" action="" method="post" target="_self" autocomplete="off" class="form" onsubmit="return validateSignup()">
+        <form name="signup" action="" method="post" target="_self" autocomplete="off" class="form">
             <h1 class="form-title">Sign up !</h1>
             <p class="form-sub-title"><span style="color:red;">*</span> fields are required</p>
 
@@ -36,7 +36,7 @@
 
             <div class="field-group">
                 <label for="password-input">Password: <span class="error-message" style="color:red;">*</span></label>
-                <input type="password" name="password" id="password-input" required minlength="4">
+                <input type="password" name="password" id="password-input" required>
                 <span class="error-message" id="password-error-message"></span>
             </div>
 
